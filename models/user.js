@@ -40,7 +40,7 @@ const userSchema = new mongoose.Schema({
   },
   emailConfirmed: {
     type: Boolean,
-    default: false
+    default: true
   },
   tempPassword: {
     type: String,

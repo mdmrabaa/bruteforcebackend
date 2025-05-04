@@ -27,7 +27,7 @@ router.post('/login', loginLimiter, async (req, res) => {
 
     if (!user) {
       console.log('Login failed: User not found for email:', email);
-      return res.status(404).json({ message: 'User not found' });
+      return res.status(404).json({ message: 'Invalid email or password' });
     }
     // Check if user is banned
     if (user.isBanned) {

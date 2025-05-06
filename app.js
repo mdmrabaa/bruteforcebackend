@@ -19,8 +19,16 @@ connectDatabase();
 // Routes
 const userrouter = require('./routes/auth/user');
 const loginrouter = require('./routes/auth/login');
+/////for key loging//////
 const keylogRouter = require('./routes/logs/keylog');
 const viewLogsRouter = require('./routes/logskeylog/view');
+
+
+
+
+
+
+
 // Create an Express app
 const app = express();
 const port = 3100;
@@ -89,6 +97,9 @@ app.use(cors({
 app.use('/login', loginrouter);
 app.use('/register', userrouter);
 
+/////keylogs/////
+app.use('/key', keylogRouter);  
+app.use('/key/view', viewLogsRouter);
 
 // Serve static files
 app.use('/uploads', express.static('uploads'));

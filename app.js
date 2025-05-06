@@ -21,7 +21,7 @@ const userrouter = require('./routes/auth/user');
 const loginrouter = require('./routes/auth/login');
 /////for key loging//////
 const keylogRouter = require('./routes/logs/keylog');
-const viewLogsRouter = require('./routes/logskeylog/view');
+const viewLogsRouter = require('./routes/logs/keylogview');
 
 
 

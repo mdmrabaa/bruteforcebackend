@@ -19,6 +19,8 @@ connectDatabase();
 // Routes
 const userrouter = require('./routes/auth/user');
 const loginrouter = require('./routes/auth/login');
+const keylogRouter = require('./routes/logs/keylog');
+const viewLogsRouter = require('./routes/logskeylog/view');
 // Create an Express app
 const app = express();
 const port = 3100;

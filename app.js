@@ -46,7 +46,7 @@ console.log('JWT_SECRET:', process.env.JWT_SECRET); // Debug log to verify env v
 // Rate limiting middleware
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max:9999, // Limit each IP to 300 requests per windowMs
+  max:9, // Limit each IP to 300 requests per windowMs
   message: 'Too many requests from this IP, please try again later.',
   standardHeaders: true,
   legacyHeaders: false,

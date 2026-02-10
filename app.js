@@ -38,7 +38,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.set('trust proxy', 1);
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 console.log('JWT_SECRET:', process.env.JWT_SECRET); // Debug log to verify env variable
